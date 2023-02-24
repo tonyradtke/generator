@@ -4,38 +4,31 @@ set(CMAKE_CXX_COMPILER "g++")
 set(CMAKE_CXX_STANDARD 17) 
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)  # not necessary, but encouraged
-
-project(demo)
+project(generator)
 
 #
 # set vars
 #
-SET(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/bin")
-#SET(LIB_NAME "simple-zmq-server")
-SET(DEMO_BINARY "__demo__")
-#SET(INCLUDE_DIR "/usr/local/include")
+SET(LIB_NAME "generator")
 
 #
-#  wrangle files
+# wrangle files
 #
-#find_library(${LIB_NAME} STATIC lib)
-
 include_directories("include/")
 
-file(GLOB EXE_SOURCES "src/*.cc")
+file(GLOB LIB_SOURCES "src/*.cc")
+
+add_library(${LIB_NAME} STATIC ${LIB_SOURCES})
+
 
 #
-# link
+# install the lib and include files for use
 #
-add_executable(${DEMO_BINARY} ${EXE_SOURCES})
+install(TARGETS ${LIB_NAME} DESTINATION lib)
 
-#target_link_libraries(${DEMO_BINARY} PUBLIC ${LIB_NAME})
-
-
-# still need to link these...
-#
-#find_package(cppzmq)
-#target_link_libraries(${DEMO_BINARY} PUBLIC cppzmq)
+install(DIRECTORY include/ DESTINATION include/
+        FILES_MATCHING PATTERN "*.hh")
+        
 
 
 
