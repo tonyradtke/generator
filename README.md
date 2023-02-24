@@ -7,6 +7,8 @@
     as well as a policy for how often each value is chosen. 
   </p>
   
+<h2> Example </h2>
+
   For example, lets say our sample data space is the following vector of strings :
 
   ```cpp
