@@ -84,7 +84,7 @@
     <ul>
       <li> find_library("generator" STATIC lib) </li>
       <li> target_link_libraries(${YOUR_BINARY} PUBLIC "simple-zmq-server") </li>
-      <li> #include \<Generator.hh\> 
+      <li> #include \<Generator.hh\> </li>
     </ul> 
   </li>
   <br>
