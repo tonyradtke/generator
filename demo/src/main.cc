@@ -8,13 +8,14 @@
 int main() {
 
 
-std::vector<std::string> sample {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+std::vector<std::string> sampleSpace {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
 
-Generator g(5, 1, sample);
+double sampleMean {5};
+double sampleSD {1};
+Generator g(sampleMean, sampleSD, sampleSpace);
 
 for (int i = 0; i < 10; ++i) {
   std::cout << g.sample() << "\n";
-  
 }
 
 
