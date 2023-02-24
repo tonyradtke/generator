@@ -11,7 +11,8 @@
 
   ```cpp
 
-    std::vector<std::string> sampleSpace {"one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"};
+    std::vector<std::string> sampleSpace {"one", "two", "three", "four", "five", 
+                                          "six", "seven", "eight", "nine", "ten"};
 
   ```
   
@@ -36,8 +37,21 @@
   ```
   
   When we view the results of these samples, we will notice that they follow a standard 
-  distribution defined by the mean and sd parameters.
+  distribution defined by the mean and sd parameters : 
 
+  ```
+    four
+    five
+    seven
+    six
+    seven
+    six
+    five
+    seven
+    four
+    five
+
+  ```
   
 
 
