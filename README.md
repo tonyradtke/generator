@@ -1,6 +1,6 @@
 <h2> Introduction </h2>
 
-  - A lightweight tool to generate sample data elements from a sample space following a user defined distribution. 
+  - A lightweight C++ tool to generate sample data elements from a sample space following a user defined distribution. 
 
   <p>
     It is often desired to generate some sort of test data. In order to do this, one must define the space of all possible values, 
@@ -84,6 +84,7 @@
     <ul>
       <li> find_library("generator" STATIC lib) </li>
       <li> target_link_libraries(${YOUR_BINARY} PUBLIC "simple-zmq-server") </li>
+      <li> #include \<Generator.hh\> 
     </ul> 
   </li>
   <br>
