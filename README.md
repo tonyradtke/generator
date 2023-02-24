@@ -9,7 +9,7 @@
   
 <h2> Example </h2>
 
-  For example, lets say our sample data space is the following vector of strings :
+  Lets say our sample data space is the following vector of strings :
 
   ```cpp
 
